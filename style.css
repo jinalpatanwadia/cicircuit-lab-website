@@ -34,19 +34,24 @@ nav a {
 
 /* Hero Section with Circuit Background */
 .hero {
-    background: linear-gradient(rgba(11, 26, 45, 0.85), rgba(11, 26, 45, 0.9)),
-                url("images/circuit-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+    height: 400px; /* IMPORTANT: without height image won’t show properly */
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     color: white;
+
+    background: linear-gradient(rgba(11, 26, 45, 0.85), rgba(11, 26, 45, 0.9)),
+                url("./images/circuit-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.hero-content h1 { font-size: 2.5rem; margin-bottom: 10px; }
-
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 .btn-secure {
     background: #1abc9c;
     color: white;
