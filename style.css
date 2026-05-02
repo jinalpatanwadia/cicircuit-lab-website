@@ -1,91 +1,73 @@
-* {
+body {
+  font-family: Arial;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  background: #f4f7f6;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: white;
+  padding: 15px;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-nav a {
-  margin: 0 10px;
+.navbar nav a {
+  margin: 10px;
   text-decoration: none;
-  color: #333;
+  color: black;
 }
 
 .search {
-  padding: 6px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 20px;
   border: 1px solid #ccc;
 }
 
-/* Hero */
+/* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #e6f7f5, #ffffff);
-}
-
-.hero h4 {
-  font-size: 12px;
-  color: #555;
-}
-
-.hero h1 {
-  margin: 10px 0;
+  padding: 50px;
 }
 
 .hero button {
-  margin-top: 15px;
   padding: 10px 20px;
   border: none;
-  background: #00a896;
+  background: #1abc9c;
   color: white;
-  border-radius: 6px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
-/* Categories */
-.categories {
+/* CARDS */
+.cards {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 40px;
+  padding: 20px;
 }
 
 .card {
-  width: 220px;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 30px;
+  border-radius: 15px;
   color: white;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  width: 200px;
   text-align: center;
 }
 
-.blue { background: #3aaed8; }
-.green { background: #2ecc71; }
-.teal { background: #00a896; }
-.lightgreen { background: #52b788; }
-
-/* Projects */
-.projects {
-  padding: 40px;
+.green {
+  background: linear-gradient(to right, #56ab2f, #a8e063);
 }
 
-.projects h2 {
-  margin-bottom: 20px;
+.blue {
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+
+/* FEATURED */
+.featured {
+  padding: 20px;
 }
 
 .project-grid {
@@ -93,22 +75,9 @@ nav a {
   gap: 20px;
 }
 
-.project-card {
-  width: 250px;
-  border: 1px solid #ddd;
+.project {
+  background: white;
+  padding: 15px;
   border-radius: 10px;
-  overflow: hidden;
-}
-
-.project-card img {
-  width: 100%;
-}
-
-.project-card h3 {
-  padding: 10px;
-}
-
-.project-card p {
-  padding: 0 10px 10px;
-  color: #555;
+  width: 200px;
 }
