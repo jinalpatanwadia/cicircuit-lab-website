@@ -32,9 +32,9 @@ nav a {
     color: #333;
 }
 
-/* Hero Section with Circuit Background */
+/* Hero Section */
 .hero {
-    height: 400px; /* IMPORTANT: without height image won’t show properly */
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,16 +42,14 @@ nav a {
     color: white;
 
     background: linear-gradient(rgba(11, 26, 45, 0.85), rgba(11, 26, 45, 0.9)),
-                url("./images/circuit-bg.jpg");
+                url("https://jinalpatanwadia.github.io/cicircuit-lab-website/images/circuit-bg.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
+/* BUTTON */
 .btn-secure {
     background: #1abc9c;
     color: white;
@@ -60,48 +58,4 @@ nav a {
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
-}
-
-/* Category Buttons */
-.categories {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: -30px;
-}
-
-.cat-btn {
-    padding: 20px 30px;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    min-width: 180px;
-    text-align: center;
-}
-
-.blue { background: linear-gradient(to right, #00c6ff, #0072ff); }
-.green { background: linear-gradient(to right, #72d44b, #52a32c); }
-
-/* Project Cards */
-.featured { padding: 50px 5%; }
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    text-align: center;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    height: 180px;
-    object-fit: cover;
 }
