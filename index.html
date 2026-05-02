@@ -1,233 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Circuit Lab</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f4f7f6;
-  overflow-x: hidden;
-}
-
-/* FLOATING PARTICLES */
-.particles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image:
-    url('https://cdn-icons-png.flaticon.com/512/1041/1041886.png'),
-    url('https://cdn-icons-png.flaticon.com/512/906/906175.png'),
-    url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png');
-  background-size: 40px, 50px, 45px;
-  background-repeat: no-repeat;
-  opacity: 0.08;
-  animation: float 25s linear infinite;
-  z-index: -1;
-}
-
-@keyframes float {
-  0% { background-position: 10% 100%, 50% 120%, 80% 130%; }
-  100% { background-position: 10% -10%, 50% -20%, 80% -30%; }
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* LOGO */
-.logo {
-  font-weight: 700;
-  font-size: 22px;
-  color: #0072ff;
-  position: relative;
-}
-
-.logo span {
-  color: #1abc9c;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0% {opacity:1;}
-  50% {opacity:0.3;}
-  100% {opacity:1;}
-}
-
-.navbar nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.navbar nav a:hover {
-  color: #0072ff;
-}
-
-/* SEARCH BAR */
-.search {
-  width: 230px;
-  padding: 10px 15px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.hero h3 {
-  color: #555;
-}
-
-.hero h1 {
-  font-size: 34px;
-}
-
-.hero button {
-  padding: 12px 25px;
-  background: #1abc9c;
-  border: none;
-  color: white;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
-/* CARDS */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  width: 220px;
-  padding: 25px;
-  border-radius: 15px;
-  color: white;
-  text-align: center;
-  background: linear-gradient(45deg,#00c6ff,#0072ff);
-  transition: 0.3s;
-}
-
-.card:nth-child(2),
-.card:nth-child(4) {
-  background: linear-gradient(45deg,#56ab2f,#a8e063);
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-/* FEATURED */
-.featured {
-  padding: 40px;
-}
-
-.project-grid {
-  display: flex;
-  gap: 20px;
-}
-
-.project {
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  width: 230px;
-  transition: 0.3s;
-}
-
-.project:hover {
-  transform: scale(1.05);
-}
-
-.project img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.project h4 {
-  margin: 10px 0;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Lab | Your Electronics Project Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">CIRCUIT ⚡ LAB</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Browse Projects</a>
+            <a href="#">Tutorials</a>
+            <a href="#">Components</a>
+            <a href="#">Community</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
 
-<!-- PARTICLES -->
-<div class="particles"></div>
+    <!-- Hero / Secure Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CIRCUIT LAB: YOUR SECURE PROJECT HUB</h1>
+            <p>Build and share safely on the web's most trusted electronics community.</p>
+            <button class="btn-secure">SECURE YOUR PROFILE</button>
+        </div>
+    </section>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <h2 class="logo">CIRCUIT<span>⚡</span>LAB</h2>
+    <!-- Category Buttons -->
+    <section class="categories">
+        <div class="cat-btn blue">📄 Project PDFs</div>
+        <div class="cat-btn green">🐱 Scratch Coding</div>
+        <div class="cat-btn blue">📦 Tinkercad Tutorials</div>
+        <div class="cat-btn green">💡 Component Videos</div>
+    </section>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Browse Projects</a>
-    <a href="#">Tutorials</a>
-    <a href="#">Components</a>
-    <a href="#">Community</a>
-  </nav>
-
-  <input class="search" placeholder="Search...">
-</div>
-
-<!-- HERO -->
-<div class="hero">
-  <h3>CIRCUIT LAB: YOUR ELECTRONICS PROJECT HUB</h3>
-  <h1>Learn, Build, and Share Electronics Projects</h1>
-  <button>Submit Your Project</button>
-</div>
-
-<!-- CARDS -->
-<div class="cards">
-  <div class="card">📄 Project PDFs</div>
-  <div class="card">🐱 Scratch Coding</div>
-  <div class="card">📦 Tinkercad Tutorials</div>
-  <div class="card">🔌 Component Videos</div>
-</div>
-
-<!-- FEATURED PROJECTS -->
-<div class="featured">
-  <h2>Featured Projects</h2>
-
-  <div class="project-grid">
-
-    <div class="project">
-      <img src="https://images.unsplash.com/photo-1581091870622-3c8f1b7e5e2f?auto=format&fit=crop&w=400&q=80">
-      <h4>Arduino Weather Station</h4>
-    </div>
-
-    <div class="project">
-      <img src="https://images.unsplash.com/photo-1581092919532-7146ff1b8f3c?auto=format&fit=crop&w=400&q=80">
-      <h4>LED Traffic Light</h4>
-    </div>
-
-    <div class="project">
-      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=400&q=80">
-      <h4>DIY Robotic Arm</h4>
-    </div>
-
-  </div>
-</div>
-
+    <!-- Featured Projects -->
+    <section class="featured">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <img src="arduino.jpg" alt="Project">
+                <p>1. Arduino Weather Station</p>
+            </div>
+            <div class="card">
+                <img src="led.jpg" alt="Project">
+                <p>2. LED Traffic Light</p>
+            </div>
+            <div class="card">
+                <img src="robotic-arm.jpg" alt="Project">
+                <p>3. DIY Robotic Arm</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
