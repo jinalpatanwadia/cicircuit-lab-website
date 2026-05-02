@@ -15,18 +15,19 @@ body {
   overflow-x: hidden;
 }
 
-/* PARTICLE BACKGROUND */
+/* FLOATING PARTICLES */
 .particles {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: url('https://cdn-icons-png.flaticon.com/512/1041/1041886.png'),
-              url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png'),
-              url('https://cdn-icons-png.flaticon.com/512/906/906175.png');
-  background-repeat: no-repeat;
+  background-image:
+    url('https://cdn-icons-png.flaticon.com/512/1041/1041886.png'),
+    url('https://cdn-icons-png.flaticon.com/512/906/906175.png'),
+    url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png');
   background-size: 40px, 50px, 45px;
-  animation: float 20s linear infinite;
+  background-repeat: no-repeat;
   opacity: 0.08;
+  animation: float 25s linear infinite;
   z-index: -1;
 }
 
@@ -45,8 +46,23 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.navbar h2 {
-  margin: 0;
+/* LOGO */
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #0072ff;
+  position: relative;
+}
+
+.logo span {
+  color: #1abc9c;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {opacity:1;}
+  50% {opacity:0.3;}
+  100% {opacity:1;}
 }
 
 .navbar nav a {
@@ -62,11 +78,10 @@ body {
 
 /* SEARCH BAR */
 .search {
-  width: 220px;
+  width: 230px;
   padding: 10px 15px;
   border-radius: 25px;
   border: 1px solid #ccc;
-  outline: none;
 }
 
 /* HERO */
@@ -75,8 +90,12 @@ body {
   padding: 60px 20px;
 }
 
+.hero h3 {
+  color: #555;
+}
+
 .hero h1 {
-  font-size: 36px;
+  font-size: 34px;
 }
 
 .hero button {
@@ -106,7 +125,8 @@ body {
   transition: 0.3s;
 }
 
-.card:nth-child(2), .card:nth-child(4) {
+.card:nth-child(2),
+.card:nth-child(4) {
   background: linear-gradient(45deg,#56ab2f,#a8e063);
 }
 
@@ -144,7 +164,7 @@ body {
 }
 
 .project h4 {
-  margin: 10px 0 5px;
+  margin: 10px 0;
 }
 
 </style>
@@ -157,7 +177,8 @@ body {
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <h2>CIRCUIT LAB</h2>
+  <h2 class="logo">CIRCUIT<span>⚡</span>LAB</h2>
+
   <nav>
     <a href="#">Home</a>
     <a href="#">Browse Projects</a>
@@ -165,6 +186,7 @@ body {
     <a href="#">Components</a>
     <a href="#">Community</a>
   </nav>
+
   <input class="search" placeholder="Search...">
 </div>
 
@@ -183,25 +205,27 @@ body {
   <div class="card">🔌 Component Videos</div>
 </div>
 
-<!-- FEATURED -->
+<!-- FEATURED PROJECTS -->
 <div class="featured">
   <h2>Featured Projects</h2>
 
   <div class="project-grid">
+
     <div class="project">
-      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
+      <img src="https://images.unsplash.com/photo-1581091870622-3c8f1b7e5e2f?auto=format&fit=crop&w=400&q=80">
       <h4>Arduino Weather Station</h4>
     </div>
 
     <div class="project">
-      <img src="https://images.unsplash.com/photo-1581092919532-7146ff1b8f3c">
+      <img src="https://images.unsplash.com/photo-1581092919532-7146ff1b8f3c?auto=format&fit=crop&w=400&q=80">
       <h4>LED Traffic Light</h4>
     </div>
 
     <div class="project">
-      <img src="https://images.unsplash.com/photo-1581091870622-3c8f1b7e5e2f">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=400&q=80">
       <h4>DIY Robotic Arm</h4>
     </div>
+
   </div>
 </div>
 
