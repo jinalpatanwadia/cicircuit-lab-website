@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Circuit Lab</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
@@ -12,32 +11,46 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  color: #333;
-
-  /* Animated Background */
-  background: linear-gradient(-45deg, #00c6ff, #0072ff, #56ab2f, #a8e063);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
+  background: #f4f7f6;
+  overflow-x: hidden;
 }
 
-/* Animation */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* PARTICLE BACKGROUND */
+.particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn-icons-png.flaticon.com/512/1041/1041886.png'),
+              url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png'),
+              url('https://cdn-icons-png.flaticon.com/512/906/906175.png');
+  background-repeat: no-repeat;
+  background-size: 40px, 50px, 45px;
+  animation: float 20s linear infinite;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+@keyframes float {
+  0% { background-position: 10% 100%, 50% 120%, 80% 130%; }
+  100% { background-position: 10% -10%, 50% -20%, 80% -30%; }
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar h2 {
+  margin: 0;
 }
 
 .navbar nav a {
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -47,36 +60,32 @@ body {
   color: #0072ff;
 }
 
+/* SEARCH BAR */
 .search {
-  padding: 8px;
-  border-radius: 20px;
-  border: none;
+  width: 220px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  color: white;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .hero button {
-  margin-top: 20px;
-  padding: 12px 30px;
+  padding: 12px 25px;
+  background: #1abc9c;
   border: none;
-  background: white;
-  color: #0072ff;
-  border-radius: 30px;
+  color: white;
+  border-radius: 25px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.hero button:hover {
-  transform: scale(1.1);
 }
 
 /* CARDS */
@@ -93,9 +102,12 @@ body {
   border-radius: 15px;
   color: white;
   text-align: center;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(45deg,#00c6ff,#0072ff);
   transition: 0.3s;
+}
+
+.card:nth-child(2), .card:nth-child(4) {
+  background: linear-gradient(45deg,#56ab2f,#a8e063);
 }
 
 .card:hover {
@@ -104,8 +116,7 @@ body {
 
 /* FEATURED */
 .featured {
-  padding: 30px;
-  color: white;
+  padding: 40px;
 }
 
 .project-grid {
@@ -116,8 +127,8 @@ body {
 .project {
   background: white;
   padding: 15px;
-  border-radius: 10px;
-  width: 220px;
+  border-radius: 12px;
+  width: 230px;
   transition: 0.3s;
 }
 
@@ -127,13 +138,22 @@ body {
 
 .project img {
   width: 100%;
+  height: 140px;
+  object-fit: cover;
   border-radius: 10px;
+}
+
+.project h4 {
+  margin: 10px 0 5px;
 }
 
 </style>
 </head>
 
 <body>
+
+<!-- PARTICLES -->
+<div class="particles"></div>
 
 <!-- NAVBAR -->
 <div class="navbar">
@@ -169,17 +189,17 @@ body {
 
   <div class="project-grid">
     <div class="project">
-      <img src="https://via.placeholder.com/200">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
       <h4>Arduino Weather Station</h4>
     </div>
 
     <div class="project">
-      <img src="https://via.placeholder.com/200">
+      <img src="https://images.unsplash.com/photo-1581092919532-7146ff1b8f3c">
       <h4>LED Traffic Light</h4>
     </div>
 
     <div class="project">
-      <img src="https://via.placeholder.com/200">
+      <img src="https://images.unsplash.com/photo-1581091870622-3c8f1b7e5e2f">
       <h4>DIY Robotic Arm</h4>
     </div>
   </div>
